@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <title>
+        SNIPPETS
+    </title>
+
+
+    <link rel="stylesheet" href="css/titleBar.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/snippetStyles.css">
+
+
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <script type='text/javascript' src="js/jquery.min.js"></script>
+    <script type='text/javascript' src="js/jquery.menu.js"></script>
+
+    <script type="text/javascript" src="js/ace.js"></script>
+    <script type="text/javascript" src="js/mode-javascript.js"></script>
+    <script type="text/javascript" src="js/theme-twilight.js"></script>
+
+    <style type="text/css" media="screen">
+        #editor {
+            position: relative;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="titleBar titleBarStyle ">
+
+            <div class="windowTitle preventSelect draggable"> EDITOR DE CODIGO HTML UMG </div>
+
+            <div class="windowControls windowControlsStyle preventSelect">
+
+                <button id="minimise">-</button>
+                <button id="maximise">[]</button>
+                <button id="quit">x</button>
+
+            </div>
+
+            <div id="menu-bar">
+                <ul class="main-menu">
+                    <li>
+                        Archivo
+                        <ul>
+
+                            <li class="icon save" onclick='createNewFile()'><a href="#">Nuevo<span>Ctrl+N</span></a>
+                            </li>
+                            <li>Nueva Carpeta</li>
+
+                            <li class="separator"></li>
+                            <li class="icon save" onclick='saveFile()'><a
+                                    href="javascript:void(0)">Guardar<span>Ctrl+S</span></a></li>
+
+                            <li class="icon save" onclick="showSaveDialogAndSaveFile()"><a
+                                    href="javascript:void(0)">Guardar Como</a></li>
+
+                            <li class="separator"></li>
+                            <li>Imprimir</li>
+                            <li>Buscar</li>
+                            <li>Reemplazar</li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        Vista
+                        <ul>
+                            <li><a href="/#!/products">Productos</a></li>
+                            <li class="separator"></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Ventana
+                        <ul>
+                            <li class="icon save"><a href="javascript:void(0)">Pantalla Completa<span>F11</span></a></li>
+
+                            <li>
+                                <a href="javascript:void(0)" onclick='toggleWidgets()'>Herramientas<span><input
+                                            type='checkbox' id='widgetCheckbox'></span></a>
+                            </li>
+                            <li class="separator"></li>
+                            <li>
+                                Opciones
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Ayuda
+                        <ul>
+                            <li onclick='showShortcuts()'>Shortcuts</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="codingScreen codingScreenStyles">
+
+            <div class="explorerContainer explorerContainerStyles">
+
+
+                <div class="filesContainer">
+
+                </div>
+
+                <div class="folderFiles">
+
+                    <div class="folderTitle">
+
+                        <div id="folderName">Carpeta</div>
+
+                        <button id="syncFiles">Actualizar</button>
+                        <button id="changeFolder">Cambiar</button>
+
+                    </div>
+
+                    <div class="exploredFilesContainer">
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="editorContainer">
+
+
+            </div>
+
+            <div class="widgetsContainer widgetsContainerStyles">
+
+                <div class="widgetsDrawer">
+                    <div class="widgetsHeader">
+                        <span>x</span>
+                    </div>
+
+                    <button id="fontAwesome"></button>
+                    <button id="github"></button>
+                    <button id="cdnjs"></button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/titleBarStuff.js"></script>
+    <script type='text/javascript' src="js/codeslate.js"></script>
+
+    <script type="text/javascript" src="js/shortcuts.js"></script>
+
+
+</body>
+
+</html>
